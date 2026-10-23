@@ -47,6 +47,14 @@
   <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.json">
 
+  <!-- Google Fonts (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -83,7 +91,7 @@
     }
   </script>
 
-  <!-- Enhanced Schema.org Structured Data (ProfessionalService & Site Navigation Links) -->
+  <!-- Schema.org Structured Data (ProfessionalService) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -104,14 +112,11 @@
       "addressCountry": "ZA"
     },
     "areaServed": ["Ga-Mothiba", "Polokwane", "Limpopo", "South Africa"],
-    "priceRange": "$$",
-    "sameAs": [
-      "https://www.it-u.co.za/"
-    ]
+    "priceRange": "$$"
   }
   </script>
 
-  <!-- Site Links Search Box / Quick Links Schema -->
+  <!-- Site Navigation Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -171,8 +176,9 @@
     </a>
 
     <!-- Mobile Menu Toggle -->
-    <button id="menu-toggle" class="min-[901px]:hidden border-0 bg-transparent cursor-pointer p-[0.55rem] text-xl" type="button" aria-expanded="false" aria-controls="primary-nav">
-      ☰ <span class="sr-only">Toggle navigation</span>
+    <button id="menu-toggle" class="min-[901px]:hidden border-0 bg-transparent cursor-pointer p-[0.55rem] text-xl text-brand-text dark:text-brand-darkText" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <i class="fa-solid fa-bars"></i>
+      <span class="sr-only">Toggle navigation</span>
     </button>
 
     <!-- Navigation -->
@@ -183,37 +189,37 @@
       <!-- Nav Group / Mega Menu -->
       <div id="nav-group" class="relative max-[900px]:w-full group">
         <button id="mega-trigger" class="border-0 bg-transparent cursor-pointer p-[0.55rem] text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:w-full max-[900px]:text-left flex items-center justify-between gap-1" type="button" aria-expanded="false" aria-controls="services-mega">
-          Services <span aria-hidden="true" class="text-xs">⌄</span>
+          Services <i class="fa-solid fa-chevron-down text-xs ml-1"></i>
         </button>
         
         <!-- Mega Menu Content -->
         <div id="services-mega" class="hidden group-hover:grid group-focus-within:grid max-[900px]:group-hover:grid absolute top-[calc(100%-1px)] left-1/2 -translate-x-1/2 w-[min(1120px,calc(100vw-2rem))] p-[1.5rem] grid-cols-1 sm:grid-cols-2 min-[901px]:grid-cols-[repeat(3,minmax(0,1fr))_minmax(180px,.9fr)] gap-[1.4rem] bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-b-[18px] shadow-custom max-[900px]:static max-[900px]:translate-x-0 max-[900px]:w-full max-[900px]:shadow-none max-[900px]:rounded-xl max-[900px]:my-2">
           <div class="flex flex-col gap-[0.6rem]">
-            <h3 class="mt-[0.1rem] mb-[0.45rem] font-bold text-[0.95rem] text-brand-text dark:text-brand-darkText">Website solutions</h3>
+            <h3 class="mt-[0.1rem] mb-[0.45rem] font-bold text-[0.95rem] text-brand-text dark:text-brand-darkText"><i class="fa-solid fa-code text-brand-primary mr-1"></i> Website solutions</h3>
             <a class="text-brand-muted dark:text-brand-darkMuted text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary hover:underline" href="/services/website-development/">Website development</a>
             <a class="text-brand-muted dark:text-brand-darkMuted text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary hover:underline" href="/portfolio/">Portfolio</a>
             <a class="text-brand-muted dark:text-brand-darkMuted text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary hover:underline" href="/projects/">Projects</a>
             <a class="text-brand-muted dark:text-brand-darkMuted text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary hover:underline" href="/pricing/">Pricing & quotes</a>
           </div>
           <div class="flex flex-col gap-[0.6rem]">
-            <h3 class="mt-[0.1rem] mb-[0.45rem] font-bold text-[0.95rem] text-brand-text dark:text-brand-darkText">Computer & software</h3>
+            <h3 class="mt-[0.1rem] mb-[0.45rem] font-bold text-[0.95rem] text-brand-text dark:text-brand-darkText"><i class="fa-solid fa-laptop-code text-brand-primary mr-1"></i> Computer & software</h3>
             <a class="text-brand-muted dark:text-brand-darkMuted text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary hover:underline" href="/services/computer-repairs/">Computer repairs</a>
             <a class="text-brand-muted dark:text-brand-darkMuted text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary hover:underline" href="/services/software-installation/">Software installation</a>
             <a class="text-brand-muted dark:text-brand-darkMuted text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary hover:underline" href="/services/operating-system-updates/">Operating system updates</a>
             <a class="text-brand-muted dark:text-brand-darkMuted text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary hover:underline" href="/services/data-backup/">Data backup</a>
           </div>
           <div class="flex flex-col gap-[0.6rem]">
-            <h3 class="mt-[0.1rem] mb-[0.45rem] font-bold text-[0.95rem] text-brand-text dark:text-brand-darkText">Technical support</h3>
+            <h3 class="mt-[0.1rem] mb-[0.45rem] font-bold text-[0.95rem] text-brand-text dark:text-brand-darkText"><i class="fa-solid fa-headset text-brand-primary mr-1"></i> Technical support</h3>
             <a class="text-brand-muted dark:text-brand-darkMuted text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary hover:underline" href="/services/it-support/">IT support</a>
             <a class="text-brand-muted dark:text-brand-darkMuted text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary hover:underline" href="/services/networking/">Networking</a>
             <a class="text-brand-muted dark:text-brand-darkMuted text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary hover:underline" href="/services/cybersecurity/">Cybersecurity assistance</a>
             <a class="text-brand-muted dark:text-brand-darkMuted text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary hover:underline" href="/support/">Support centre</a>
           </div>
           <a class="flex flex-col gap-[0.6rem] bg-gradient-to-br from-[#e6f3ff] to-[#f3f7ff] dark:from-[#172c43] dark:to-[#172c43] p-[1.1rem] rounded-[14px] text-brand-text dark:text-brand-darkText no-underline hover:no-underline" href="/contact/">
-            <span class="text-2xl text-brand-primary dark:text-brand-darkPrimary">✦</span>
+            <span class="text-2xl text-brand-primary dark:text-brand-darkPrimary"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
             <strong class="mt-[0.1rem] mb-[0.45rem] text-[0.95rem] font-bold">Need a hand?</strong>
             <span class="text-[0.9rem] text-brand-muted dark:text-brand-darkMuted">Tell us what you need and discuss the next step.</span>
-            <b class="font-bold text-brand-primary dark:text-brand-darkPrimary mt-auto">Contact us →</b>
+            <b class="font-bold text-brand-primary dark:text-brand-darkPrimary mt-auto">Contact us <i class="fa-solid fa-arrow-right ml-1"></i></b>
           </a>
         </div>
       </div>
@@ -221,7 +227,9 @@
       <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:py-[0.65rem] hover:text-brand-primary hover:underline" href="/blog/">Blog</a>
       <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:py-[0.65rem] hover:text-brand-primary hover:underline" href="/faq/">FAQ</a>
       <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:py-[0.65rem] hover:text-brand-primary hover:underline" href="/contact/">Contact</a>
-      <button id="theme-toggle" class="border-0 bg-transparent cursor-pointer p-[0.55rem] text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem]" type="button" aria-label="Toggle dark mode">◐</button>
+      <button id="theme-toggle" class="border-0 bg-transparent cursor-pointer p-[0.55rem] text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem]" type="button" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-circle-half-stroke"></i>
+      </button>
     </nav>
   </header>
 
@@ -234,8 +242,12 @@
       <h1 class="text-[clamp(2.4rem,5vw,4.4rem)] leading-[1.08] max-w-[850px] my-2 sm:mb-4 font-bold -tracking-[0.04em]">Technology that works for you.</h1>
       <p class="max-w-[720px] text-[#d7e4f3] print:text-[#333] text-[1.1rem]">iTu Solutions helps individuals, homes and businesses with website development, computer repairs, software installation and everyday IT support.</p>
       <div class="flex gap-[0.8rem] flex-wrap mt-[1.5rem]">
-        <a class="inline-flex items-center justify-center px-[1.1rem] py-[0.8rem] rounded-[10px] bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] border border-brand-primary dark:border-brand-darkPrimary font-bold cursor-pointer hover:bg-brand-primaryHover dark:hover:bg-blue-400 no-underline hover:no-underline print:hidden" href="/contact/">Request a quote</a>
-        <a class="inline-flex items-center justify-center px-[1.1rem] py-[0.8rem] rounded-[10px] bg-transparent text-inherit border border-current font-bold cursor-pointer hover:opacity-90 no-underline hover:no-underline print:hidden" href="https://wa.me/27711405870">Chat on WhatsApp</a>
+        <a class="inline-flex items-center justify-center gap-2 px-[1.1rem] py-[0.8rem] rounded-[10px] bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] border border-brand-primary dark:border-brand-darkPrimary font-bold cursor-pointer hover:bg-brand-primaryHover dark:hover:bg-blue-400 no-underline hover:no-underline print:hidden" href="/contact/">
+          <i class="fa-solid fa-paper-plane"></i> Request a quote
+        </a>
+        <a class="inline-flex items-center justify-center gap-2 px-[1.1rem] py-[0.8rem] rounded-[10px] bg-transparent text-inherit border border-current font-bold cursor-pointer hover:opacity-90 no-underline hover:no-underline print:hidden" href="https://wa.me/27711405870">
+          <i class="fa-brands fa-whatsapp text-lg text-green-400"></i> Chat on WhatsApp
+        </a>
       </div>
     </section>
 
@@ -244,24 +256,28 @@
       <h2 class="text-[clamp(1.7rem,3vw,2.3rem)] leading-[1.2] font-bold mb-6">How we can help</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 min-[901px]:grid-cols-3 gap-4">
         <article class="bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-[16px] p-[1.35rem] shadow-card">
+          <div class="text-brand-primary dark:text-brand-darkPrimary text-2xl mb-3"><i class="fa-solid fa-globe"></i></div>
           <h3 class="mt-0 font-bold text-xl mb-2">Website development</h3>
           <p class="text-brand-muted dark:text-brand-darkMuted mb-4">Responsive websites built to present your brand and services online.</p>
-          <a class="text-brand-primary dark:text-brand-darkPrimary font-semibold hover:underline" href="/services/website-development/">Explore service →</a>
+          <a class="text-brand-primary dark:text-brand-darkPrimary font-semibold hover:underline inline-flex items-center gap-1" href="/services/website-development/">Explore service <i class="fa-solid fa-arrow-right text-xs"></i></a>
         </article>
         <article class="bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-[16px] p-[1.35rem] shadow-card">
+          <div class="text-brand-primary dark:text-brand-darkPrimary text-2xl mb-3"><i class="fa-solid fa-screwdriver-wrench"></i></div>
           <h3 class="mt-0 font-bold text-xl mb-2">Computer repairs</h3>
           <p class="text-brand-muted dark:text-brand-darkMuted mb-4">Practical troubleshooting and repair support for common computer issues.</p>
-          <a class="text-brand-primary dark:text-brand-darkPrimary font-semibold hover:underline" href="/services/computer-repairs/">Explore service →</a>
+          <a class="text-brand-primary dark:text-brand-darkPrimary font-semibold hover:underline inline-flex items-center gap-1" href="/services/computer-repairs/">Explore service <i class="fa-solid fa-arrow-right text-xs"></i></a>
         </article>
         <article class="bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-[16px] p-[1.35rem] shadow-card">
+          <div class="text-brand-primary dark:text-brand-darkPrimary text-2xl mb-3"><i class="fa-solid fa-download"></i></div>
           <h3 class="mt-0 font-bold text-xl mb-2">Software installation</h3>
           <p class="text-brand-muted dark:text-brand-darkMuted mb-4">Help installing software and keeping systems up to date.</p>
-          <a class="text-brand-primary dark:text-brand-darkPrimary font-semibold hover:underline" href="/services/software-installation/">Explore service →</a>
+          <a class="text-brand-primary dark:text-brand-darkPrimary font-semibold hover:underline inline-flex items-center gap-1" href="/services/software-installation/">Explore service <i class="fa-solid fa-arrow-right text-xs"></i></a>
         </article>
         <article class="bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-[16px] p-[1.35rem] shadow-card">
+          <div class="text-brand-primary dark:text-brand-darkPrimary text-2xl mb-3"><i class="fa-solid fa-user-gear"></i></div>
           <h3 class="mt-0 font-bold text-xl mb-2">IT support</h3>
           <p class="text-brand-muted dark:text-brand-darkMuted mb-4">Friendly technical assistance for setup, maintenance and troubleshooting.</p>
-          <a class="text-brand-primary dark:text-brand-darkPrimary font-semibold hover:underline" href="/services/it-support/">Explore service →</a>
+          <a class="text-brand-primary dark:text-brand-darkPrimary font-semibold hover:underline inline-flex items-center gap-1" href="/services/it-support/">Explore service <i class="fa-solid fa-arrow-right text-xs"></i></a>
         </article>
       </div>
     </section>
@@ -272,12 +288,14 @@
         <p class="uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">Local support</p>
         <h2 class="text-[clamp(1.7rem,3vw,2.3rem)] leading-[1.2] font-bold mb-4">Clear advice. Practical solutions.</h2>
         <p class="text-brand-muted dark:text-brand-darkMuted mb-4">Based in Ga-Mothiba, Nobody, Polokwane, Limpopo, iTu Solutions focuses on making technology easier to use and maintain.</p>
-        <a class="text-brand-primary dark:text-brand-darkPrimary font-semibold hover:underline" href="/about/">Meet iTu Solutions →</a>
+        <a class="text-brand-primary dark:text-brand-darkPrimary font-semibold hover:underline inline-flex items-center gap-1" href="/about/">Meet iTu Solutions <i class="fa-solid fa-arrow-right text-xs"></i></a>
       </div>
       <div class="bg-gradient-to-br from-[#e6f3ff] to-[#f3f7ff] dark:from-[#172c43] dark:to-[#172c43] border border-brand-border dark:border-brand-darkBorder rounded-[16px] p-[1.35rem] shadow-card">
         <h3 class="mt-0 font-bold text-xl mb-2">Need help with a tech issue?</h3>
         <p class="text-brand-muted dark:text-brand-darkMuted mb-4">Tell us what you need and we’ll discuss the next practical step.</p>
-        <a class="inline-flex items-center justify-center px-[1.1rem] py-[0.8rem] rounded-[10px] bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold cursor-pointer hover:bg-brand-primaryHover dark:hover:bg-blue-400 no-underline hover:no-underline" href="/contact/">Contact us</a>
+        <a class="inline-flex items-center justify-center gap-2 px-[1.1rem] py-[0.8rem] rounded-[10px] bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold cursor-pointer hover:bg-brand-primaryHover dark:hover:bg-blue-400 no-underline hover:no-underline" href="/contact/">
+          <i class="fa-solid fa-envelope"></i> Contact us
+        </a>
       </div>
     </section>
 
@@ -295,7 +313,23 @@
           </span>
         </a>
         <p class="text-[#aebed1] mb-2">Practical IT and website services for homes, individuals and businesses.</p>
-        <p class="text-[#aebed1]">Ga-Mothiba, Nobody, Polokwane, Limpopo, 0726, South Africa.</p>
+        <p class="text-[#aebed1] mb-4"><i class="fa-solid fa-location-dot text-brand-primary mr-1"></i> Ga-Mothiba, Nobody, Polokwane, Limpopo, 0726, South Africa.</p>
+        
+        <!-- Social Links -->
+        <div class="flex items-center gap-3">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#172c43] text-[#c6d5e7] hover:text-white hover:bg-brand-primary flex items-center justify-center transition-colors" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#172c43] text-[#c6d5e7] hover:text-white hover:bg-brand-primary flex items-center justify-center transition-colors" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#172c43] text-[#c6d5e7] hover:text-white hover:bg-brand-primary flex items-center justify-center transition-colors" aria-label="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#172c43] text-[#c6d5e7] hover:text-white hover:bg-brand-primary flex items-center justify-center transition-colors" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
       </div>
       <div>
         <h3 class="font-bold text-lg text-white mb-3">Explore</h3>
@@ -313,8 +347,8 @@
       </div>
       <div>
         <h3 class="font-bold text-lg text-white mb-3">Get in touch</h3>
-        <a class="block text-[#c6d5e7] hover:text-white my-[0.35rem]" href="mailto:sekoalabopape@gmail.com">sekoalabopape@gmail.com</a>
-        <a class="block text-[#c6d5e7] hover:text-white my-[0.35rem]" href="https://wa.me/27711405870">WhatsApp: 071 140 5870</a>
+        <a class="block text-[#c6d5e7] hover:text-white my-[0.35rem]" href="mailto:sekoalabopape@gmail.com"><i class="fa-solid fa-envelope mr-1 text-brand-primary"></i> sekoalabopape@gmail.com</a>
+        <a class="block text-[#c6d5e7] hover:text-white my-[0.35rem]" href="https://wa.me/27711405870"><i class="fa-brands fa-whatsapp mr-1 text-green-400"></i> WhatsApp: 071 140 5870</a>
         <h3 class="font-bold text-lg text-white mt-4 mb-3">Legal</h3>
         <a class="block text-[#c6d5e7] hover:text-white my-[0.35rem]" href="/legal/privacy-policy/">Privacy</a>
         <a class="block text-[#c6d5e7] hover:text-white my-[0.35rem]" href="/legal/terms-and-conditions/">Terms</a>
@@ -327,7 +361,7 @@
       <span>Website developer: Sekoala Daniel Bopape</span>
     </div>
   </footer>
-
+  
   <!-- Interactivity Scripts -->
 <script src="/assets/js/main.js" defer></script>
 <script src="/assets/js/navigation.js" defer></script>
